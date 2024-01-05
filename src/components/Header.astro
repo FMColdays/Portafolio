@@ -9,28 +9,32 @@
 </header>
 
 <script>
-  const enlaces = document.querySelectorAll("nav a");
-  const $menuBackdrop = document.querySelector("#menu-backdrop") as HTMLElement;
-  const $nav = document.querySelector("#navegacion");
+  if (window.innerWidth > 450) {
+    const enlaces = document.querySelectorAll("nav a");
+    const $menuBackdrop = document.querySelector(
+      "#menu-backdrop"
+    ) as HTMLElement;
+    const $nav = document.querySelector("#navegacion");
 
-  enlaces.forEach((enlace) => {
-    enlace.addEventListener("mouseenter", () => {
-      const { left, top, width, height } = enlace.getBoundingClientRect();
-      const { left: leftNav, top: topNav } = $nav.getBoundingClientRect();
+    enlaces.forEach((enlace) => {
+      enlace.addEventListener("mouseenter", () => {
+        const { left, top, width, height } = enlace.getBoundingClientRect();
+        const { left: leftNav, top: topNav } = $nav.getBoundingClientRect();
 
-      $menuBackdrop.style.setProperty("--left", `${left - leftNav - 10}px`);
-      $menuBackdrop.style.setProperty("--top", `${topNav - top - 12}px`);
-      $menuBackdrop.style.setProperty("--width", `${width}px`);
-      $menuBackdrop.style.setProperty("--height", `${height}px`);
-      $menuBackdrop.style.opacity = "1";
-      $menuBackdrop.style.visibility = "visible";
+        $menuBackdrop.style.setProperty("--left", `${left - leftNav - 10}px`);
+        $menuBackdrop.style.setProperty("--top", `${topNav - top - 12}px`);
+        $menuBackdrop.style.setProperty("--width", `${width}px`);
+        $menuBackdrop.style.setProperty("--height", `${height}px`);
+        $menuBackdrop.style.opacity = "1";
+        $menuBackdrop.style.visibility = "visible";
+      });
+
+      enlace.addEventListener("mouseleave", () => {
+        $menuBackdrop.style.opacity = "0";
+        $menuBackdrop.style.visibility = "hidden";
+      });
     });
-
-    enlace.addEventListener("mouseleave", () => {
-      $menuBackdrop.style.opacity = "0";
-      $menuBackdrop.style.visibility = "hidden";
-    });
-  });
+  }
 </script>
 
 <style>

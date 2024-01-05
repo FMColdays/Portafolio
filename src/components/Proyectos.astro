@@ -9,10 +9,7 @@ import Badge from "./Badge.astro";
       ({ titulo, descripcion, fecha, link, imagen, tecnologias }) => (
         <article>
           <a class="link" href={link} target="_blank" rel="noreferrer noopener">
-            <div
-              class="imagen-proyecto"
-              style={`${imagen && `background-image: url('${imagen}')`}`}
-            />
+            <div class="imagen-proyecto lazy-bg" data-src={imagen} />
             <h1>{titulo}</h1>
             <time datetime={fecha}>{fecha}</time>
             <p>{descripcion}</p>
@@ -27,6 +24,26 @@ import Badge from "./Badge.astro";
     )
   }
 </div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lazyBgImages = document.querySelectorAll(".lazy-bg");
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLElement;
+          img.style.backgroundImage = `url('${img.dataset.src}')`;
+          observer.unobserve(img);
+        }
+      });
+    });
+
+    lazyBgImages.forEach((img) => {
+      observer.observe(img);
+    });
+  });
+</script>
 
 <style>
   .seccion-proyectos {
