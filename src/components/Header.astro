@@ -44,19 +44,35 @@
     display: flex;
     justify-content: center;
     padding-block: 2rem;
+    margin-inline: 2rem;
     z-index: 10;
   }
 
   nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
     max-width: 120rem;
     margin: 0 auto;
-    padding: 1rem;
     border-radius: 2rem;
     position: relative;
     overflow: hidden;
     animation: blur linear both;
     animation-timeline: scroll();
     animation-range: 0 200px;
+  }
+  @media (min-width: 451px) {
+    nav {
+      display: unset;
+    }
+  }
+
+  @media (min-width: 419px) {
+    nav {
+      padding: 1rem;
+    }
   }
 
   @keyframes blur {
