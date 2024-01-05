@@ -2,10 +2,12 @@
 const tecnologia = Astro.props;
 ---
 
-<span style={tecnologia.class}>
-  <tecnologia.icono />
-  {tecnologia.nombre}
-</span>
+<li>
+  <span style={tecnologia.class}>
+    <tecnologia.icono />
+    {tecnologia.nombre}
+  </span>
+</li>
 
 <style>
   span {
@@ -17,5 +19,9 @@ const tecnologia = Astro.props;
     border-radius: 3rem;
     background-color: rgb(255 255 255 0.358);
     font-size: 1.1rem;
+  }
+
+  li{
+    all: unset;
   }
 </style>
