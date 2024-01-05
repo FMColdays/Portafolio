@@ -1,0 +1,15 @@
+---
+import { EXPERIENCIAS } from "../utilities/experiencias";
+import ExperienciaItem from "./ExperienciaItem.astro";
+---
+
+<ol>
+  {EXPERIENCIAS.map((experiencia) => <ExperienciaItem {...experiencia} />)}
+</ol>
+
+<style>
+  ol {
+    list-style: none;
+    padding: 0;
+  }
+</style>

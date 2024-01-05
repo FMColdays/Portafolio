@@ -1,0 +1,130 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Socials from "../components/Socials.astro";
+import LinkedinIcon from "../icons/Linkedin.astro";
+import GithubIcon from "../icons/Github.astro";
+import MailIcon from "../icons/Mail.astro";
+import ProyectoIcon from "../icons/ProyectoIcon.astro";
+import ExperienciasIcon from "../icons/Experiencia.astro";
+import CurriculumIcon from "../icons/Curriculum.astro";
+import Experiencias from "../components/Experiencias.astro";
+import Proyectos from "../components/Proyectos.astro";
+---
+
+<Layout title="Portafolio | Erick">
+  <main>
+    <section class="main-seccion">
+      <h1>Hola, soy Erick</h1>
+      <h2>
+        <span style="color: rgb(221, 221, 92);">Desarrollador Web Mexicano</span
+        >, <span style="color: rgb(123, 186, 227);"
+          >apasionado por aprender y crear aplicaciones impactantes</span
+        >.
+      </h2>
+
+      <nav class="nav-socials">
+        <Socials href="https://linkedin.com/in/erick-gonzález-072213277">
+          <LinkedinIcon class="habilidades-icons" />
+          Linkedin
+        </Socials>
+        <Socials href="https://github.com/FMColdays">
+          <GithubIcon class="habilidades-icons" />
+          Github
+        </Socials>
+        <Socials href="mailto:erickgp51@gmail.com"> 
+          <MailIcon class="habilidades-icons" />
+          erickgp51@gmail.com
+        </Socials>
+        <Socials
+          href="../public/document/Curriculum.pdf"
+          download="Curriculum aspirante"
+        >
+          <CurriculumIcon class="habilidades-icons" />
+          Curriculum
+        </Socials>
+      </nav>
+    </section>
+
+    <section id="experiencia" class="seccion-experiencia">
+      <h2 class="titulo-experiencia">
+        <ExperienciasIcon class="habilidades-icons" />
+        Experiencias
+      </h2>
+      <Experiencias />
+    </section>
+
+    <section id="proyectos" class="seccion-proyectos">
+      <h2 class="titulo-experiencia">
+        <ProyectoIcon class="habilidades-icons" />
+        Proyectos
+      </h2>
+      <Proyectos />
+    </section>
+  </main>
+
+  <style>
+    main {
+      max-width: 80rem;
+      margin: 7rem auto 0 auto;
+      padding-inline: 4rem;
+    }
+
+    @media (min-width: 768px) {
+      main {
+        margin: 15rem auto 0 auto;
+      }
+    }
+
+    /* Main */
+    .main-seccion h1 {
+      font-size: 4rem;
+      color: white;
+      margin: 0;
+    }
+
+    @media (min-width: 576px) {
+      .main-seccion h1 {
+        font-size: 5rem;
+      }
+    }
+
+    .main-seccion h2 {
+      color: white;
+      text-wrap: balance;
+      font-size: 2.2rem;
+    }
+
+    @media (min-width: 576px) {
+      .main-seccion h2 {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* Experiencias*/
+    .titulo-experiencia {
+      color: #fff;
+      margin-left: -1rem;
+    }
+    .seccion-experiencia,
+    .seccion-proyectos {
+      font-size: 2rem;
+      margin-top: 15rem;
+      text-wrap: balance;
+    }
+
+    .seccion-proyectos {
+      padding-bottom: 3rem;
+    }
+
+    .nav-socials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .habilidades-icons {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  </style>
+</Layout>

@@ -1,0 +1,30 @@
+---
+const valor = Astro.props;
+---
+
+<a {...Astro.props} target="_blank" rel="noopener noreferrer">
+  <slot />
+
+  <style>
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      border-radius: 10rem;
+      padding: 0.5rem 1rem;
+      background-color: rgba(185, 174, 174, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      color: white;
+      transition:
+        transform 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+    }
+
+    a:hover {
+      transform: scale(1.05);
+      background-color: rgba(185, 174, 174, 0.4);
+    }
+  </style>
+</a>

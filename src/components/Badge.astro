@@ -1,0 +1,21 @@
+---
+const tecnologia = Astro.props;
+---
+
+<span style={tecnologia.class}>
+  <tecnologia.icono />
+  {tecnologia.nombre}
+</span>
+
+<style>
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.4rem 1.5rem;
+    border-radius: 3rem;
+    background-color: rgb(255 255 255 0.358);
+    font-size: 1.1rem;
+  }
+</style>

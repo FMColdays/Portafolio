@@ -1,0 +1,106 @@
+---
+import { PROYECTOS } from "../utilities/proyectos";
+import Badge from "./Badge.astro";
+---
+
+<div class="seccion-proyectos">
+  {
+    PROYECTOS.map(
+      ({ titulo, descripcion, fecha, link, imagen, tecnologias }) => (
+        <article>
+          <a class="link" href={link} target="_blank" rel="noreferrer noopener">
+            <div
+              class="imagen-proyecto"
+              style={`${imagen && `background-image: url('${imagen}')`}`}
+            />
+            <h1>{titulo}</h1>
+            <time datetime={fecha}>{fecha}</time>
+            <p>{descripcion}</p>
+            <ul class="lista-tecnologia">
+              {tecnologias.map((tecnologia) => (
+                <Badge {...tecnologia} />
+              ))}
+            </ul>
+          </a>
+        </article>
+      )
+    )
+  }
+</div>
+
+<style>
+  .seccion-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    grid-gap: 2rem;
+  }
+
+  @media (min-width: 567px) {
+    .seccion-proyectos :is(article:first-child, article:last-child) {
+      grid-column: 1 / span 2;
+    }
+  }
+
+  .seccion-proyectos a {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1rem;
+    color: white;
+    border-radius: 2rem;
+    padding-inline: 2rem;
+    font-size: 1.4rem;
+    background-color: rgb(0 0 0 / 0.1);
+    border: 1px solid rgb(0 153 255/ 0.7);
+    overflow: hidden;
+  }
+
+  .seccion-proyectos a::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgb(0 0 0 / 0.7);
+    z-index: -1;
+  }
+
+  .link {
+    all: unset;
+    cursor: pointer;
+  }
+
+  h1 {
+    font-size: 2.3rem;
+    color: rgb(180 189 53);
+  }
+
+  time {
+    width: fit-content;
+    background-color: rgb(0 0 0 / 0.4);
+    border: 1px solid rgb(0 153 255 / 0.7);
+    border-radius: 10rem;
+    padding: 0.3rem 1rem;
+  }
+
+  .imagen-proyecto {
+    position: absolute;
+    inset: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: transform 0.6s ease-in-out;
+    z-index: -2;
+  }
+
+  .seccion-proyectos article:hover .imagen-proyecto {
+    transform: scale(1.1);
+  }
+
+  .lista-tecnologia {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+</style>
