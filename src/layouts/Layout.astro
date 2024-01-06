@@ -4,9 +4,10 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 interface Props {
   title: string;
+  description: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 const { currentLocale } = Astro;
 ---
 
@@ -14,9 +15,18 @@ const { currentLocale } = Astro;
 <html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="keywords"
+      content="diseño innovador, creatividad visual, funcionalidad excepcional, experiencia de usuario, estética vanguardista, proyectos impactantes, originalidad en el diseño, soluciones visuales, portafolio de diseño, inspiración creativa"
+    />
+    <meta name="description" content={description} />
+    <meta property="og:image" content="/img/portada.webp" />
+    <title>
+      Diseño Innovador: Explorando Creatividad y Funcionalidad en Cada Proyecto
+    </title>
+
     <link rel="stylesheet" href="/css/normalize.css" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
