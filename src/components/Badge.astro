@@ -1,11 +1,17 @@
 ---
-const tecnologia = Astro.props;
+interface Props {
+  nombre: string;
+  clase: string;
+  Icono: (_props: Record<string, any>) => any;
+}
+
+const { nombre, clase, Icono } = Astro.props;
 ---
 
 <li>
-  <span style={tecnologia.class}>
-    <tecnologia.icono />
-    {tecnologia.nombre}
+  <span style={clase}>
+    <Icono width="18px" height="18px" />
+    {nombre}
   </span>
 </li>
 
@@ -21,7 +27,7 @@ const tecnologia = Astro.props;
     font-size: 1.1rem;
   }
 
-  li{
+  li {
     all: unset;
   }
 </style>

@@ -1,0 +1,52 @@
+---
+import { TAGS } from "../utilities/proyectos";
+---
+
+<ul>
+  {
+    Object.values(TAGS).map((habilidad) => (
+      <li style={habilidad.clase}>
+        <habilidad.Icono class="logo" width="5rem" height="5rem" />
+        <h2>{habilidad.nombre}</h2>
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5rem 2rem;
+    padding: 0;
+  }
+
+  h2 {
+    z-index: 1;
+  }
+
+  .logo {
+    position: absolute;
+    opacity: 0.2;
+
+    transform: scale(2);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  li:hover .logo {
+    transform: rotate(35deg) scale(3);
+  }
+
+  li {
+    position: relative;
+    width: 100%;
+    min-height: 15rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+</style>

@@ -1,41 +1,58 @@
 import React from "../icons/React.astro";
-import Nodejs from "../icons/Nodejs.astro";
 import Html from "../icons/HtmlIcon.astro";
 import Css from "../icons/Css.astro";
 import Laravel from "../icons/Laravel.astro";
 import Php from "../icons/Php.astro";
 import Vite from "../icons/Vite.astro";
+import JavaScript from "../icons/JavaScript.astro";
+import AstroI from "../icons/AstroI.astro";
+import Mysql from "../icons/Mysql.astro";
 
 export const TAGS = {
-  REACT: {
-    nombre: "react",
-    class: "background-color: rgb(7 187 221 / 0.4); ",
-    icono: React,
-  },
   HTML: {
-    nombre: "html",
-    class: "background-color: rgb(227 79 38 /0.3);",
-    icono: Html,
+    nombre: "HTML",
+    clase: "background-color: rgb(227 79 38 /0.3);",
+    Icono: Html,
   },
   CSS: {
-    nombre: "css",
-    class: "background-color: rgb(39 155 211 / 0.3);",
-    icono: Css,
+    nombre: "CSS",
+    clase: "background-color: rgb(39 155 211 / 0.3);",
+    Icono: Css,
   },
-  LARAVEL: {
-    nombre: "laravel",
-    class: "background-color: rgb(0 0 0 / 0.5);",
-    icono: Laravel,
+  JavaScript: {
+    nombre: "JavaScript",
+    clase: "background-color: rgb(240 219 79 / 0.6); ",
+    Icono: JavaScript,
   },
   PHP: {
-    nombre: "php",
-    class: "background-color: rgb(134 137 173 / 0.6); ",
-    icono: Php,
+    nombre: "PhP",
+    clase: "background-color: rgb(134 137 173 / 0.6); ",
+    Icono: Php,
+  },
+  LARAVEL: {
+    nombre: "Laravel",
+    clase: "background-color: rgb(0 0 0 / 0.5);",
+    Icono: Laravel,
+  },
+  REACT: {
+    nombre: "React",
+    clase: "background-color: rgb(7 187 221 / 0.4); ",
+    Icono: React,
+  },
+  Astro: {
+    nombre: "Astro",
+    clase: "background-color: rgb(0 0 0 / 0.5); ",
+    Icono: AstroI,
   },
   Vite: {
-    nombre: "vite",
-    class: "background-color: rgb(0 0 0/ 0.6); ",
-    icono: Vite,
+    nombre: "Vite",
+    clase: "background-color: rgb(0 0 0/ 0.6); ",
+    Icono: Vite,
+  },
+  Mysql: {
+    nombre: "MySQL",
+    clase: "background-color: rgb(0 117 143 / 0.2); ",
+    Icono: Mysql,
   },
 };
 

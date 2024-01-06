@@ -9,6 +9,8 @@ import ExperienciasIcon from "../icons/Experiencia.astro";
 import CurriculumIcon from "../icons/Curriculum.astro";
 import Experiencias from "../components/Experiencias.astro";
 import Proyectos from "../components/Proyectos.astro";
+import Secciones from "../components/Secciones.astro";
+import Habilidades from "../components/Habilidades.astro";
 ---
 
 <Layout title="Portafolio | Erick">
@@ -31,7 +33,7 @@ import Proyectos from "../components/Proyectos.astro";
           <GithubIcon class="habilidades-icons" />
           Github
         </Socials>
-        <Socials href="mailto:erickgp51@gmail.com"> 
+        <Socials href="mailto:erickgp51@gmail.com">
           <MailIcon class="habilidades-icons" />
           erickgp51@gmail.com
         </Socials>
@@ -45,21 +47,26 @@ import Proyectos from "../components/Proyectos.astro";
       </nav>
     </section>
 
-    <section id="experiencia" class="seccion-experiencia">
-      <h2 class="titulo-experiencia">
+    <Secciones id="experiencia">
+      <h2>
         <ExperienciasIcon class="habilidades-icons" />
         Experiencias
       </h2>
       <Experiencias />
-    </section>
+    </Secciones>
 
-    <section id="proyectos" class="seccion-proyectos">
-      <h2 class="titulo-experiencia">
+    <Secciones id="proyectos">
+      <h2>
         <ProyectoIcon class="habilidades-icons" />
         Proyectos
       </h2>
       <Proyectos />
-    </section>
+    </Secciones>
+
+    <Secciones id="habilidades">
+      <h2>Habilidades</h2>
+      <Habilidades />
+    </Secciones>
   </main>
 
   <style>
@@ -75,10 +82,20 @@ import Proyectos from "../components/Proyectos.astro";
       }
     }
 
+    .main-seccion {
+      position: relative;
+    }
+
+    @media (min-width: 768px) {
+      .main-seccion {
+        margin-block: 18rem;
+      }
+    }
+
     /* Main */
     .main-seccion h1 {
       font-size: 4rem;
-      color: white;
+
       margin: 0;
     }
 
@@ -89,7 +106,6 @@ import Proyectos from "../components/Proyectos.astro";
     }
 
     .main-seccion h2 {
-      color: white;
       text-wrap: balance;
       font-size: 2.2rem;
     }
@@ -101,19 +117,8 @@ import Proyectos from "../components/Proyectos.astro";
     }
 
     /* Experiencias*/
-    .titulo-experiencia {
-      color: #fff;
+    main :global(section):nth-child(2) h2 {
       margin-left: -1rem;
-    }
-    .seccion-experiencia,
-    .seccion-proyectos {
-      font-size: 2rem;
-      margin-top: 15rem;
-      text-wrap: balance;
-    }
-
-    .seccion-proyectos {
-      padding-bottom: 3rem;
     }
 
     .nav-socials {

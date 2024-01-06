@@ -1,0 +1,16 @@
+---
+const { id } = Astro.props;
+---
+
+<section id={id}>
+  <slot />
+</section>
+
+<style>
+  section {
+    font-size: 2rem;
+    margin-top: 10rem;
+    text-wrap: balance;
+    padding-bottom: 5rem;
+  }
+</style>
