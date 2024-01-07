@@ -58,15 +58,6 @@ export const TAGS = {
 
 export const PROYECTOS = [
   {
-    titulo: "Evaluación de trastornos emocionales",
-    descripcion:
-      "Desarrollé una aplicación en Laravel que implementa diversos tests de trastornos emocionales. Estos tests son llevados a cabo por estudiantes universitarios, con la finalidad de explorar y comprender de manera práctica la detección de estos trastornos.",
-    fecha: "Enero 2020",
-    link: "https://github.com/FMColdays/TrastornoTest",
-    imagen: "/img/proyecto1img.webp",
-    tecnologias: [TAGS.LARAVEL, TAGS.PHP],
-  },
-  {
     titulo: "Tienda de muebles",
     descripcion:
       "Página estática de muebles creada con HTML y CSS. Diseñada con entusiasmo para aprender y perfeccionar mis habilidades.",
@@ -83,6 +74,15 @@ export const PROYECTOS = [
     link: "https://github.com/FMColdays/citas_react_vite",
     imagen: "/img/proyecto3img.webp",
     tecnologias: [TAGS.REACT, TAGS.Vite],
+  },
+  {
+    titulo: "Evaluación de trastornos emocionales",
+    descripcion:
+      "Desarrollé una aplicación en Laravel que implementa diversos tests de trastornos emocionales. Estos tests son llevados a cabo por estudiantes universitarios, con la finalidad de explorar y comprender de manera práctica la detección de estos trastornos.",
+    fecha: "Enero 2020",
+    link: "https://github.com/FMColdays/TrastornoTest",
+    imagen: "/img/proyecto1img.webp",
+    tecnologias: [TAGS.LARAVEL, TAGS.PHP],
   },
   {
     titulo: "Salón de eventos",
