@@ -19,7 +19,14 @@ import Habilidades from "../components/Habilidades.astro";
 >
   <main>
     <section class="main-seccion">
-      <img class="img-mio" src="/img/yo.png" alt="Imagen mía" />
+      <img
+        class="img-mio"
+        src="/img/yo.webp"
+        alt="Imagen mía"
+        width="10rem"
+        height="10rem"
+        loading="lazy"
+      />
       <h1>Hola, soy Erick</h1>
       <h2>
         <span style="color: rgb(221, 221, 92);">Desarrollador Web Mexicano</span
@@ -108,7 +115,8 @@ import Habilidades from "../components/Habilidades.astro";
     }
 
     .img-mio {
-      width: 100px;
+      width: 10rem;
+      height: 10rem;
       border-radius: 50%;
     }
 
