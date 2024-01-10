@@ -19,11 +19,18 @@ import Habilidades from "../components/Habilidades.astro";
 >
   <main>
     <section class="main-seccion">
+      <img class="img-mio" src="/img/yo.png" alt="Imagen mía" />
       <h1>Hola, soy Erick</h1>
       <h2>
         <span style="color: rgb(221, 221, 92);">Desarrollador Web Mexicano</span
-        >, <span style="color: rgb(123, 186, 227);"
-          >apasionado por aprender y crear aplicaciones impactantes</span
+        >. Apasionado por aprender y
+        <span style="color: rgb(123, 186, 227);"
+          >crear aplicaciones impactastes</span
+        >. Me especializo en el área de <span style="color: rgb(255, 165, 0);"
+          >Front End</span
+        >
+        pero también tengo experiencia en el desarrollo <span
+          style="color: rgb(0, 128, 0);">Full Stack</span
         >.
       </h2>
 
@@ -87,18 +94,29 @@ import Habilidades from "../components/Habilidades.astro";
 
     .main-seccion {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
 
     @media (min-width: 768px) {
       .main-seccion {
+        text-align: center;
         margin-block: 18rem;
       }
     }
 
+    .img-mio {
+      width: 100px;
+      border-radius: 50%;
+    }
+
     /* Main */
     .main-seccion h1 {
-      font-size: 4rem;
-
+      text-align: center;
+      padding-top: 2rem;
+      font-size: 3.5rem;
       margin: 0;
     }
 
@@ -109,13 +127,13 @@ import Habilidades from "../components/Habilidades.astro";
     }
 
     .main-seccion h2 {
-      text-wrap: balance;
+      font-weight: 400;
       font-size: 2.2rem;
     }
 
     @media (min-width: 576px) {
       .main-seccion h2 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
     }
 
