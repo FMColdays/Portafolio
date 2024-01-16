@@ -57,7 +57,7 @@ export const TAGS = {
 };
 
 export const PROYECTOS = [
-  {
+  /*{
     titulo: "Tienda de muebles",
     descripcion:
       "Página estática de muebles creada con HTML y CSS. Diseñada con entusiasmo para aprender y perfeccionar mis habilidades.",
@@ -75,25 +75,27 @@ export const PROYECTOS = [
     imagen: "/img/proyecto3img.webp",
     tecnologias: [TAGS.REACT, TAGS.Vite],
   },
+  */
   {
     titulo: "Evaluación de trastornos emocionales",
     descripcion:
-      "Desarrollé una aplicación en Laravel que implementa diversos tests de trastornos emocionales. Estos tests son llevados a cabo por estudiantes universitarios, con la finalidad de explorar y comprender de manera práctica la detección de estos trastornos.",
+      "Desarrollé una aplicación en Laravel que implementa diversos tests de trastornos emocionales. Estos tests son llevados a cabo por estudiantes universitarios, con la finalidad de explorar y comprender de manera práctica la detección de cada uno de estos trastornos.",
     fecha: "Octubre 2023",
-    link: "https://github.com/FMColdays/TrastornoTest",
+    repositorio: "https://github.com/FMColdays/TrastornoTest",
+    pagina: "https://tecnmtest.com/login",
     imagen: "/img/proyecto1img.webp",
     tecnologias: [TAGS.LARAVEL, TAGS.PHP],
   },
   {
     titulo: "Salón de eventos",
     descripcion:
-      "Creado desde cero con Laravel. Es una aplicación para para rentar salones de eventos los cuales cuentan con diversos paquetes en los cuales puedes incluir servicios extras.",
+      "Desarrollada desde cero utilizando Laravel, esta aplicación ofrece una gestión de alquiler de salones de eventos. Los salones disponibles están diseñados para adaptarse a diversas necesidades donde los usuarios seleccionar entre una variedad de paquetes personalizables",
     fecha: "Mayo 2023",
-    link: "https://github.com/FMColdays/SalonDeEventos",
+    repositorio: ["https://github.com/FMColdays/SalonDeEventos"],
     imagen: "/img/proyecto4img.webp",
     tecnologias: [TAGS.LARAVEL],
   },
-  {
+  /*{
     titulo: "Cotizador de criptomonedas",
     descripcion:
       "Esta app fue realizada con React y Vite en la cual veremos como tomar 10 criptomonedas y cotizarlas en tiempo real para obtener su precio al momento.",
@@ -110,5 +112,5 @@ export const PROYECTOS = [
     link: "https://github.com/FMColdays/Administrador-de-gastos",
     imagen: "/img/proyecto6img.webp",
     tecnologias: [TAGS.REACT, TAGS.Vite],
-  },
+  },*/
 ];

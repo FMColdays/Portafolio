@@ -19,49 +19,39 @@ import Habilidades from "../components/Habilidades.astro";
 >
   <main>
     <section class="main-seccion">
-      <img
-        class="img-mio"
-        src="/img/yo.webp"
-        alt="Imagen mía"
-        width="10rem"
-        height="10rem"
-        loading="lazy"
-      />
-      <h1>Hola, soy Erick</h1>
-      <h2>
-        <span style="color: rgb(221, 221, 92);">Desarrollador Web Mexicano</span
-        >. Apasionado por aprender y
-        <span style="color: rgb(123, 186, 227);"
-          >crear aplicaciones impactastes</span
-        >. Me especializo en el área de <span style="color: rgb(255, 165, 0);"
-          >Front End</span
-        >
-        pero también tengo experiencia en el desarrollo <span
-          style="color: rgb(0, 128, 0);">Full Stack</span
-        >.
-      </h2>
+      <img class="img-mia" src="/img/yo.webp" alt="Imagen mía" />
+      <div class="contenido">
+        <h1>Hola, soy Erick</h1>
+        <h2>
+          <span style="color: rgb(221, 221, 92);"
+            >Desarrollador Web Mexicano</span
+          >, apasionado por <span style="color: rgb(123, 186, 227);">
+            aprender y crear
+          </span> aplicaciones impactantes.
+        </h2>
 
-      <nav class="nav-socials">
-        <Socials href="https://linkedin.com/in/erick-gonzález-072213277">
-          <LinkedinIcon class="habilidades-icons" />
-          Linkedin
-        </Socials>
-        <Socials href="https://github.com/FMColdays">
-          <GithubIcon class="habilidades-icons" />
-          Github
-        </Socials>
-        <Socials href="mailto:erickgp51@gmail.com">
-          <MailIcon class="habilidades-icons" />
-          erickgp51@gmail.com
-        </Socials>
-        <Socials
-          href="../public/document/Curriculum.pdf"
-          download="Curriculum aspirante"
-        >
-          <CurriculumIcon class="habilidades-icons" />
-          Curriculum
-        </Socials>
-      </nav>
+        <nav class="nav-socials">
+          <Socials href="https://linkedin.com/in/erick-gonzález-072213277">
+            <LinkedinIcon class="habilidades-icons" />
+            Linkedin
+          </Socials>
+          <Socials href="https://github.com/FMColdays">
+            <GithubIcon class="habilidades-icons" />
+            Github
+          </Socials>
+          <Socials href="mailto:erickgp51@gmail.com">
+            <MailIcon class="habilidades-icons" />
+            erickgp51@gmail.com
+          </Socials>
+          <Socials
+            href="../public/document/Curriculum.pdf"
+            download="Curriculum aspirante"
+          >
+            <CurriculumIcon class="habilidades-icons" />
+            Curriculum
+          </Socials>
+        </nav>
+      </div>
     </section>
 
     <Secciones id="experiencia">
@@ -100,31 +90,38 @@ import Habilidades from "../components/Habilidades.astro";
     }
 
     .main-seccion {
-      position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
+      text-align: center;
     }
 
     @media (min-width: 768px) {
       .main-seccion {
-        text-align: center;
-        margin-block: 18rem;
+        flex-direction: row-reverse;
+        gap: 2em;
+        padding-bottom: 8rem;
+        text-align: initial;
       }
     }
 
-    .img-mio {
+    .img-mia {
       width: 10rem;
       height: 10rem;
       border-radius: 50%;
     }
 
+    @media (min-width: 768px) {
+      .img-mia {
+        width: 20rem;
+        height: 20rem;
+      }
+    }
+
     /* Main */
     .main-seccion h1 {
-      text-align: center;
-      padding-top: 2rem;
-      font-size: 3.5rem;
+      font-size: 4rem;
+      color: white;
       margin: 0;
     }
 
@@ -135,8 +132,9 @@ import Habilidades from "../components/Habilidades.astro";
     }
 
     .main-seccion h2 {
-      font-weight: 400;
-      font-size: 2.2rem;
+      color: white;
+      text-wrap: balance;
+      font-size: 1.8rem;
     }
 
     @media (min-width: 576px) {

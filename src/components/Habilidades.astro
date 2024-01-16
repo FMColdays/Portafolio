@@ -5,7 +5,7 @@ import { TAGS } from "../utilities/proyectos";
 <ul>
   {
     Object.values(TAGS).map((habilidad) => (
-      <li class="tecnologia" style={habilidad.clase}>
+      <li class="li-habilidades" style={habilidad.clase}>
         <habilidad.Icono className="logo" width="5rem" height="5rem" />
         <h2>{habilidad.nombre}</h2>
       </li>
@@ -13,34 +13,18 @@ import { TAGS } from "../utilities/proyectos";
   }
 </ul>
 <div class="contenedor-btn">
-  <button class="btn-minmax" id="toggleButton">Ver más</button>
+  <button class="btn-minmax" id="btnmas">Ver más</button>
 </div>
 
 <script>
-  const $TECNOLOGIAS = document.querySelectorAll(".tecnologia");
-  const $boton = document.getElementById("toggleButton");
-  let pressBoton = false;
-
-  window.addEventListener("resize", updateDisplay);
-
-  let cantidad = 4;
-  function updateDisplay() {
-    $TECNOLOGIAS.forEach((tecnologia, index) => {
-      const li = tecnologia as HTMLElement;
-      if (window.innerWidth > 576 || pressBoton) {
-        li.style.display = "";
-      } else if (index >= cantidad) {
-        li.style.display = "none";
-      }
-    });
-  }
-
-  updateDisplay();
+  const $boton = document.getElementById("btnmas");
+  const $li = document.querySelectorAll(".li-habilidades");
   $boton.addEventListener("click", () => {
-    cantidad = cantidad === 4 ? 9 : 4;
-    pressBoton = !pressBoton;
-    updateDisplay();
-    $boton.textContent = cantidad === 9 ? "Ver menos" : "Ver más";
+    $li.forEach((h) => {
+      const $habilidad = h as HTMLElement;
+      $habilidad.style.display = "flex";
+    });
+    $boton.style.display = "none";
   });
 </script>
 
@@ -90,6 +74,15 @@ import { TAGS } from "../utilities/proyectos";
     --posicion: translateX(200px);
   }
 
+  li:nth-child(n + 5) {
+    display: none;
+  }
+
+  @media (min-width: 576px) {
+    li:nth-child(n + 5) {
+      display: flex;
+    }
+  }
   @keyframes mostrar {
     from {
       transform: var(--posicion);
@@ -121,7 +114,6 @@ import { TAGS } from "../utilities/proyectos";
       display: none;
     }
   }
-
   .btn-minmax:active {
     background-color: rgb(15 198 15 / 0.1);
   }
