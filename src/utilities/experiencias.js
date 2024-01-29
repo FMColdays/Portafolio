@@ -9,7 +9,7 @@ export const EXPERIENCIAS = [
     titulo: "Desarrollo Movil - Java",
     descripcion:
       "Participe en el desarrollo de una aplicación  móvil para el registro de entradas  y salidas de instrumentos químicos, este trabajo lo realice con un compañero más con el lenguaje de programación Java en Android Studio.",
-    fecha: "Junio 2022",
+    fecha: "Julio 2023",
     // link: "http://google.com",
   },
 ];
