@@ -40,6 +40,22 @@ const { currentLocale } = Astro;
   </body>
 </html>
 
+<script>
+  let tituloPrevio = document.title;
+
+  window.addEventListener("blur", () => {
+    tituloPrevio = document.title;
+    document.title = "Regresa pronto (:";
+    setTimeout(() => {
+      document.title = tituloPrevio;
+    }, 8000);
+  });
+
+  window.addEventListener("focus", () => {
+    document.title = tituloPrevio;
+  });
+</script>
+
 <style is:global>
   html {
     font-size: 62.5%;
