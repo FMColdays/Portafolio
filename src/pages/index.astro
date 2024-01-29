@@ -11,6 +11,7 @@ import Experiencias from "../components/Experiencias.astro";
 import Proyectos from "../components/Proyectos.astro";
 import Secciones from "../components/Secciones.astro";
 import Habilidades from "../components/Habilidades.astro";
+import SobreMi from "../components/SobreMi.astro";
 ---
 
 <Layout
@@ -74,89 +75,94 @@ import Habilidades from "../components/Habilidades.astro";
       <h2>Habilidades</h2>
       <Habilidades />
     </Secciones>
+
+    <Secciones id="sobre-mi">
+      <h2>Sobre mi</h2>
+      <SobreMi />
+    </Secciones>
   </main>
-
-  <style>
-    main {
-      max-width: 80rem;
-      margin: 7rem auto 0 auto;
-      padding-inline: 4rem;
-    }
-
-    @media (min-width: 768px) {
-      main {
-        margin: 15rem auto 0 auto;
-      }
-    }
-
-    .main-seccion {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    @media (min-width: 768px) {
-      .main-seccion {
-        flex-direction: row-reverse;
-        gap: 2em;
-        padding-bottom: 8rem;
-        text-align: initial;
-      }
-    }
-
-    .img-mia {
-      width: 10rem;
-      height: 10rem;
-      border-radius: 50%;
-    }
-
-    @media (min-width: 768px) {
-      .img-mia {
-        width: 20rem;
-        height: 20rem;
-      }
-    }
-
-    /* Main */
-    .main-seccion h1 {
-      font-size: 4rem;
-      color: white;
-      margin: 0;
-    }
-
-    @media (min-width: 576px) {
-      .main-seccion h1 {
-        font-size: 5rem;
-      }
-    }
-
-    .main-seccion h2 {
-      color: white;
-      text-wrap: balance;
-      font-size: 1.8rem;
-    }
-
-    @media (min-width: 576px) {
-      .main-seccion h2 {
-        font-size: 2.2rem;
-      }
-    }
-
-    /* Experiencias*/
-    main :global(section):nth-child(2) h2 {
-      margin-left: -1rem;
-    }
-
-    .nav-socials {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .habilidades-icons {
-      width: 2.4rem;
-      height: 2.4rem;
-    }
-  </style>
 </Layout>
+
+<style>
+  main {
+    max-width: 80rem;
+    margin: 7rem auto 0 auto;
+    padding-inline: 4rem;
+  }
+
+  @media (min-width: 768px) {
+    main {
+      margin: 15rem auto 0 auto;
+    }
+  }
+
+  .main-seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .main-seccion {
+      flex-direction: row-reverse;
+      gap: 2em;
+      padding-bottom: 8rem;
+      text-align: initial;
+    }
+  }
+
+  .img-mia {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+  }
+
+  @media (min-width: 768px) {
+    .img-mia {
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+
+  /* Main */
+  .main-seccion h1 {
+    font-size: 4rem;
+    color: white;
+    margin: 0;
+  }
+
+  @media (min-width: 576px) {
+    .main-seccion h1 {
+      font-size: 5rem;
+    }
+  }
+
+  .main-seccion h2 {
+    color: white;
+    text-wrap: balance;
+    font-size: 1.8rem;
+  }
+
+  @media (min-width: 576px) {
+    .main-seccion h2 {
+      font-size: 2.2rem;
+    }
+  }
+
+  /* Experiencias*/
+  main :global(section):nth-child(2) h2 {
+    margin-left: -1rem;
+  }
+
+  .nav-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .habilidades-icons {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+</style>

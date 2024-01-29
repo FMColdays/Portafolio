@@ -91,7 +91,7 @@ export const PROYECTOS = [
     descripcion:
       "Desarrollada desde cero utilizando Laravel, esta aplicación ofrece una gestión de alquiler de salones de eventos. Los salones disponibles están diseñados para adaptarse a diversas necesidades donde los usuarios seleccionar entre una variedad de paquetes personalizables",
     fecha: "Mayo 2023",
-    repositorio: ["https://github.com/FMColdays/SalonDeEventos"],
+    repositorio: "https://github.com/FMColdays/SalonDeEventos",
     imagen: "/img/proyecto4img.webp",
     tecnologias: [TAGS.LARAVEL],
   },
@@ -104,13 +104,15 @@ export const PROYECTOS = [
     imagen: "/img/proyecto5img.webp",
     tecnologias: [TAGS.REACT, TAGS.Vite],
   },
+  */
   {
     titulo: "Control de Presupuesto",
     descripcion:
       "Una aplicación de control de presupuesto desarrollada con React y Vite. Esta herramienta te permite gestionar tus finanzas de manera efectiva, con funciones para realizar un seguimiento detallado de ingresos y gastos, establecer presupuestos mensuales y visualizarlo de manera gráfica.",
     fecha: "Marzo 2023",
-    link: "https://github.com/FMColdays/Administrador-de-gastos",
+    repositorio: "https://github.com/FMColdays/Administrador-de-gastos",
+    pagina: "https://administrador-de-gastos.vercel.app",
     imagen: "/img/proyecto6img.webp",
     tecnologias: [TAGS.REACT, TAGS.Vite],
-  },*/
+  },
 ];

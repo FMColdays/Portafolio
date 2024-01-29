@@ -1,22 +1,15 @@
 export const EXPERIENCIAS = [
   {
-    titulo: "Desarrollador Web Full Stack",
+    titulo: "Concurso programación - TecNM",
     descripcion:
-      "Diseño y desarrollo de aplicaciones web interactivas para clientes externos. Colaboración con un equipo multidisciplinario para implementar nuevas funcionalidades y mejorar la experiencia del usuario.",
-    fecha: "Enero 2020",
+      "Participe en concursos de programación en mi universidad, donde he trabajado con diversos lenguajes, tales como Python, C++ y Java. Estos desafíos se hicieron con la finalidad de ver las habilidades de cada uno de lo estudiantes y animar a muchos más a participar.",
+    fecha: "Marzo 2020",
   },
   {
-    titulo: "Ingeniero de Software",
+    titulo: "Desarrollo Movil - Java",
     descripcion:
-      "Desarrollo de software embebido para sistemas de control industrial. Participación en el diseño y la implementación de algoritmos de control y en la mejora continua de la eficiencia de los procesos.",
-    fecha: "Mayo 2018",
-    link: "http://google.com" 
-  },
-  {
-    titulo: "Analista de Datos",
-    descripcion:
-      `Análisis y visualización de datos para informes ejecutivos. Implementación de modelos predictivos utilizando técnicas de aprendizaje automático. Colaboración con equipos de diferentes departamentos para identificar oportunidades de mejora.`,
-    fecha: "Agosto 2016 ",
-    link: "http://google.com"
+      "Participe en el desarrollo de una aplicación  móvil para el registro de entradas  y salidas de instrumentos químicos, este trabajo lo realice con un compañero más con el lenguaje de programación Java en Android Studio.",
+    fecha: "Junio 2022",
+    // link: "http://google.com",
   },
 ];

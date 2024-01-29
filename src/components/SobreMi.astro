@@ -1,0 +1,59 @@
+<article>
+  <img class="img-mia" src="/img/yo2.webp" alt="" />
+  <div class="contenido">
+    <p>
+      Me llamo Erick González pero mis amigos me llaman Coldays. Empecé en la
+      programación en la universidad, desde que tenía 18 años. Actualmente estoy
+      en busca de trabajo para aplicar mis habilidades como programador.
+    </p>
+    <p>
+      <span style="color: #dddd5c">Me especializo en el área de Frontend</span>,
+      pero también tengo experiencia en el desarrollo Full Stack. Mi enfoque se
+      centra en <span style="color: #dddd5c"
+        >crear interfaces de usuario intuitivas y atractivas</span
+      >, utilizando tecnologías modernas para proporcionar mejores experiencias
+      a los usuarios.
+      <p>
+        Como egresado del Instituto Tecnológico de Tuxtla Gutiérrez,<span
+          style="color:#dddd5c"
+        >
+          adquirí habilidades en tecnologías como Java, C, C++ y PHP</span
+        >, con especialización en su framework Laravel. Además, de manera
+        autodidacta he estudiado diversas tecnologías para expandir mis
+        conocimientos como desarrollador de software.
+      </p>
+    </p>
+  </div>
+
+  <style>
+    article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+    }
+
+    .img-mia {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+    }
+
+    p {
+      text-wrap: pretty;
+      font-size: 1.6rem;
+    }
+
+    @media (min-width: 768px) {
+      article {
+        flex-direction: row-reverse;
+      }
+
+      .img-mia {
+        width: 25rem;
+        height: 25rem;
+        border-radius: 50%;
+      }
+    }
+  </style>
+</article>

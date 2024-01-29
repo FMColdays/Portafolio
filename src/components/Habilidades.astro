@@ -94,13 +94,6 @@ import { TAGS } from "../utilities/proyectos";
     }
   }
 
-  .contenedor-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-block: 5rem;
-  }
-
   .btn-minmax {
     all: unset;
     border: 1px solid rgb(15 198 15 / 0.6);
@@ -109,7 +102,17 @@ import { TAGS } from "../utilities/proyectos";
     display: block;
   }
 
+  .contenedor-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+  }
+
   @media (min-width: 576px) {
+    .contenedor-btn {
+      display: none;
+    }
     .btn-minmax {
       display: none;
     }
